@@ -1,6 +1,6 @@
 var obj = {
 	a : "thing1",
-  b : "thing2"
+	b : "thing2"
 }
 
 var objToArray = (o) => {
