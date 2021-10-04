@@ -10,20 +10,17 @@ namespace ColorCount {
         }
 
         public static int CountColors(int n, IList<int> colors) {
-            List<int> resultList = new List<int>();
+            List<int> resultList = new();
             foreach (int color in colors) {
                 for (int i = 0; i < color; i++) {
                     resultList.Add(i + 1);
                 }
             }
-            //Console.WriteLine(ArrayToString(resultList));
             return CountHelper(resultList, 0, n - 1);
         }
 
         private static int CountHelper(List<int> list, int k, int n) {
             if (k == n) {
-                //Console.Write(ArrayToString(list));
-                //Console.WriteLine(" : {0} ", CheckCondition(list));
                 return CheckCondition(list) ? 1 : 0;
             } else {
                 int count = 0;
